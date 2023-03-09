@@ -1,29 +1,22 @@
 import java.util.Scanner;
 
-public class slide74 {
-    public static void main(String args[]){
-        Scanner sc = new Scanner(System.in); 
-        int n;
-        while(n>0){
-            System.out.println (n);
-        }       
-        //khai bao mang
-        int arrA[] = new int [100];
-        int n, tong =0;
-        System.out.println(x:"nhap vao kich thuoc cua mang");
-        n = sc.nextInt();
-        for(int i =0;i<n;i++);{
-            if (arrA[i] %2==0){
-                sum +=arrA[i]
+public class Slide74 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n, i, tong = 0;
+        do {
+            System.out.print("Nhap vao kich thuoc cua mang: ");
+            n = sc.nextInt();
+        } while (n <= 0);
+        int arrA[] = new int[n];
+        for (i = 0; i < n; i++) {
+            System.out.printf("Nhap vao gia tri thu %d: ", i + 1);
+            arrA[i] = sc.nextInt();
+            if (arrA[i] % 2 == 0) {
+                tong += arrA[i];
             }
-            System.out.println("nhap vao phan tu"+ i +":");
-            arrA[i]= sc.nextInt();
         }
-
-        //gan gia tri vao cac phan tu 
-        //tinh tong cac phan tu chan
-
-        
-
+        System.out.printf("Tong cac so chan cua mang la %d", tong);
     }
 }
