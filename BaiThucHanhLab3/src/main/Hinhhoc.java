@@ -1,13 +1,14 @@
 package main;
+import java.util.Scanner;
 
 import Hinhhoc.HinhChuNhat;
 import Hinhhoc.HinhVuong;
 import Hinhhoc.Hinhtron;
 import Hinhhoc.Hinhtru;
 
-public class Main {
+public class Hinhhoc {
     public static void main(String[] args) throws Exception {
-
+        Scanner sc = new Scanner(System.in);
         HinhVuong hinhvuong = new HinhVuong();
         hinhvuong.xuatTen();
         hinhvuong.nhapCanh();
@@ -16,10 +17,11 @@ public class Main {
         hinhvuong.inChuvi();
         hinhvuong.inDienTich();
 
+
         HinhChuNhat hinhchunhat = new HinhChuNhat();
         hinhchunhat.xuatTen();
-        hinhchunhat.nhapChieuDai();
-        hinhchunhat.nhapChieuRong();
+        hinhchunhat.NhapChieuDai(sc);;
+        hinhchunhat.NhapChieuRong(sc);
         hinhchunhat.tinhChuVi();
         hinhchunhat.tinhDienTich();
         hinhchunhat.inChuvi();
@@ -27,17 +29,23 @@ public class Main {
 
         Hinhtron hinhtron = new Hinhtron();
         hinhtron.xuatTen();
-        hinhtron.nhapbankinh();
-        hinhtron.tinhchuvi();
-        hinhtron.tinhdientich();
+        hinhtron.nhapbankinh(sc);
+        hinhtron.tinhChuVi();
+        hinhtron.tinhDienTich();
         hinhtron.inChuvi();
         hinhtron.inDienTich();
 
+
         Hinhtru hinhtru = new Hinhtru();
         hinhtru.xuatTen();
-        hinhtru.nhapchieucao();
+        hinhtru.NhapChieuCao();;
+        hinhtru.tinhChuVi();
+        hinhtru.inChuvi();
+        hinhtru.tinhDienTich();
+        hinhtru.inDienTich();
         hinhtru.tinhthetich();
         hinhtru.inTheTich();
-
-    }
+        
+       
+}
 }

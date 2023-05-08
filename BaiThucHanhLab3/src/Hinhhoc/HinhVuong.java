@@ -4,14 +4,12 @@ import java.util.Scanner;
 
 public class HinhVuong extends HinhChuNhat {
     Scanner sc = new Scanner(System.in);
-
-    public HinhVuong() {
-        ten = "Hình vuông";
-    }
-
-    public void nhapCanh() {
+    public HinhVuong(){
+        super.setTen("Hinh vuong");
+    }   
+    public void nhapCanh(){
         System.out.print("Nhap canh =");
-        dai = rong = sc.nextFloat();
+        super.setDai(sc.nextFloat());
+        super.setRong(super.getDai());
     }
-
 }
